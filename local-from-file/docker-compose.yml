@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  syslog-client:
+    image: rsyslog:local-from-file
+    volumes:
+      - ./rsyslog.conf:/etc/rsyslog.conf
+      - ./source.log:/source.log
